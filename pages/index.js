@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import { Parallax, ParallaxLayer } from 'react-spring/addons.cjs'
 
 export default function Home() {
   return (
@@ -11,25 +12,58 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
         <script src="https://kit.fontawesome.com/3e3390c446.js" crossorigin="anonymous"></script>
       </Head>
-
-      <main className={styles.main}>
+      <nav className={styles.navbar}>
+        <h6 className={styles.dot} style={{float:'left', display:'inline-block', fontWeight:'400'}}>HOUR</h6>
+        <a> Classic</a>
+        <a>Premium </a>
+        <a>Sport </a>
+        <svg style={{display:'flow', flexDirection:'row', marginLeft:'75em', marginTop:'5px'}} xmlns="http://www.w3.org/2000/svg" class="h-5 w-5"  viewBox="0 0 30 30" fill="currentColor">
+        <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd" />
+        </svg>
+      </nav>
+      <Parallax pages={2} style={{ top: '0', left: '0' }}>
+  <ParallaxLayer
+    offset={0}
+    speed={2.5}
+    style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+    <main className={styles.main}>
         <h6 style={{fontWeight:'100', fontSize:'.8rem', padding:'0', margin:'0'}}>LIMITED EDITION PARIS</h6>
         <h2 style={{fontWeight:'600'}}>Apple Watch Hermes</h2>
       </main>
-      <div style={{textAlign:'center', fontSize:'15rem', color:'white', fontWeight:'700', zIndex:'-99999999'}}>
+      <div style={{position:'relative',marginTop:'0.5em', marginLeft:'0.1em',textAlign:'left', fontSize:'15rem', color:'white', fontWeight:'700', zIndex:'1'}}>
         <h1>HERMES</h1>
-        <div style={{display:'flex', alignItems:'center', zIndex:'9'}}>
-        <Image src={'/watch.png'} width={480} height={480} />
-        </div>
       </div>
+      <div style={{position:'absolute', top:'150px', padding:'0',left:'40em', zIndex:'1000'}}>
+        <Image src={'/watch.png'} width={480} height={480} />
+        
+      </div>
+  </ParallaxLayer>
 
-      <nav>
-        <ul>
-          <li>Classic</li>
-          <li>Sport</li>
-          <li>Premium</li>
-        </ul>
-      </nav>
+  <ParallaxLayer offset={1} speed={2} style={{ backgroundColor: '#bfb4af' }} />
+
+  <ParallaxLayer
+    offset={1}
+    speed={0.5}
+    style={{
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      color: 'white',
+    }}>
+    <section className={styles.adv}>
+      <p>A partnership based on parallel thinking, singular vision, and mutual regard continues
+         with a fresh expression. The latest Apple Watch Hermès collection showcases boldly 
+         colorful leather bands and a delightful watch face designed by Apple.</p>
+      </section>
+      <div style={{position:'absolute', top:'40px', padding:'0',left:'50em', zIndex:'1000'}}>
+        <Image src={'/hermes.png'} width={480} height={480} />
+      </div>
+      {/* <button className={styles.button}>Learn More</button> */} 
+      
+  </ParallaxLayer>
+</Parallax>
+
+
       <footer className={styles.footer}>
         
       </footer>
