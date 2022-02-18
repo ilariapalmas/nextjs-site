@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import { Parallax, ParallaxLayer } from 'react-spring/addons.cjs'
+import { Trail, animated } from 'react-spring/addons.cjs'
 
 export default function Home() {
   return (
@@ -15,58 +16,80 @@ export default function Home() {
       <nav className={styles.navbar}>
         <h6 className={styles.dot} style={{float:'left', display:'inline-block', fontWeight:'400'}}>HOUR</h6>
         <a> Classic</a>
-        <a>Premium </a>
-        <a>Sport </a>
-        <svg style={{display:'flow', flexDirection:'row', marginLeft:'75em', marginTop:'5px'}} xmlns="http://www.w3.org/2000/svg" class="h-5 w-5"  viewBox="0 0 30 30" fill="currentColor">
+        <a href="#Premium">Premium </a>
+        <a href="#Sport">Sport </a>
+        <svg style={{display:'flow', flexDirection:'row', marginLeft:'75em', marginTop:'5px'}} xmlns="http://www.w3.org/2000/svg" class="h-5 w-5"  viewBox="0 0 300 300" fill="currentColor">
         <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd" />
         </svg>
       </nav>
-      <Parallax pages={2} style={{ top: '0', left: '0' }}>
+      <Parallax pages={3} style={{ top: '0', left: '0' }}>
   <ParallaxLayer
     offset={0}
     speed={2.5}
     style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
     <main className={styles.main}>
-        <h6 style={{fontWeight:'100', fontSize:'.8rem', padding:'0', margin:'0'}}>LIMITED EDITION PARIS</h6>
+        <h6 style={{fontWeight:'100', fontSize:'1.3rem', padding:'0', margin:'0'}}>LIMITED EDITION PARIS</h6>
         <h2 style={{fontWeight:'600'}}>Apple Watch Hermes</h2>
       </main>
-      <div style={{position:'relative',marginTop:'0.5em', marginLeft:'0.1em',textAlign:'left', fontSize:'15rem', color:'white', fontWeight:'700', zIndex:'1'}}>
+
+      
+      <div style={{position:'relative',marginTop:'0.5em', marginLeft:'0.1em',textAlign:'left', fontSize:'15rem', color:'white', fontWeight:'700', zIndex:'1', padding:'0'}}>
         <h1>HERMES</h1>
       </div>
-      <div style={{position:'absolute', top:'150px', padding:'0',left:'40em', zIndex:'1000'}}>
-        <Image src={'/watch.png'} width={480} height={480} />
-        
+      <div style={{position:'absolute', top:'180px', padding:'0',left:'50em', zIndex:'1'}}>
+        <Image src={'/watch.png'} width={480} height={480} />        
       </div>
+      <p  className={styles.header}>A partnership based on parallel thinking, singular vision, and mutual regard continues
+         with a fresh expression. The latest Apple Watch Hermès collection showcases boldly 
+         colorful leather bands and a delightful watch face designed by Apple.</p>
   </ParallaxLayer>
 
   <ParallaxLayer offset={1} speed={2} style={{ backgroundColor: '#bfb4af' }} />
-
   <ParallaxLayer
     offset={1}
-    speed={0.5}
+    speed={0.8}
     style={{
       display: 'flex',
       justifyContent: 'center',
       alignItems: 'center',
       color: 'white',
     }}>
-    <section className={styles.adv}>
-      <p>A partnership based on parallel thinking, singular vision, and mutual regard continues
-         with a fresh expression. The latest Apple Watch Hermès collection showcases boldly 
-         colorful leather bands and a delightful watch face designed by Apple.</p>
+    <section id="Premium">
+      <p className={styles.adv2}><b><span style={{fontSize:'2.5rem'}}>Come full circuit</span></b>. Inspired by the classic chain Hermès bracelet, the Circuit H Single Tour leather bands feature a modern chain motif available in three dynamic color combinations.</p>
       </section>
-      <div style={{position:'absolute', top:'40px', padding:'0',left:'50em', zIndex:'1000'}}>
-        <Image src={'/hermes.png'} width={480} height={480} />
+      <div style={{position:'absolute', top:'40px', padding:'0',left:'10em', zIndex:'1000'}}>
+        <Image src={'/hermes2.png'} width={480} height={680} />
       </div>
       {/* <button className={styles.button}>Learn More</button> */} 
+  </ParallaxLayer>
+  <ParallaxLayer offset={2} speed={2} style={{ backgroundColor: '#bfb4af' }} />
+  <ParallaxLayer
+    offset={2}
+    speed={0.8}
+    style={{
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      color: 'white',
+    }}>
+    <section id="Sport">
+      <p  className={styles.adv}>The exclusive Hermès Sport Band. Light, flexible, and water resistant,
+       the Sport Band in signature Hermès orange is perfect for exercising. Included as an additional
+        band with every Apple Watch Hermès silver stainless steel case. And space black stainless steel
+         cases come with a matching black Hermès Sport Band.</p>
+      </section>
+      <div style={{position:'absolute', top:'40px', padding:'0',left:'60em', zIndex:'1000'}}>
+        <Image src={'/hermes.png'} width={480} height={480} />
+      </div>
+      <a href="https://www.apple.com/apple-watch-hermes/"><button className={styles.button}>Learn More</button> </a>
+
+      <footer class="text-center text-gray-700 p-4" style={{backgroundColor:'transparent', position:'absolute', width:'100vw', color:'black', fontSize:'1.2rem', marginTop:'34em', textAlign:'center', width:'100%' }}>
+    © 2021 Copyright:
+    <a class="text-gray-800" href="http://ilariapalmas.com/"> Ilaria Palmas </a>
+</footer>
       
   </ParallaxLayer>
 </Parallax>
-
-
-      <footer className={styles.footer}>
-        
-      </footer>
     </div>
   )
 }
