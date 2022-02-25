@@ -14,18 +14,18 @@ export default function Home() {
         <script src="https://kit.fontawesome.com/3e3390c446.js" crossorigin="anonymous"></script>
       </Head>
       <nav className={styles.navbar}>
-        <h6 className={styles.dot} style={{float:'left', display:'inline-block', fontWeight:'400'}}>HOUR</h6>
+        <h6 className={styles.dot} style={{float:'left', marginLeft:'1em', display:'inline-block', fontWeight:'400'}}>HOUR</h6>
         <a> Classic</a>
         <a href="#Premium">Premium </a>
         <a href="#Sport">Sport </a>
-        <svg style={{display:'flow', flexDirection:'row', marginLeft:'75em', marginTop:'5px'}} xmlns="http://www.w3.org/2000/svg" class="h-5 w-5"  viewBox="0 0 300 300" fill="currentColor">
+        <svg style={{display:'flow', flexDirection:'row', padding:'0', marginLeft:'125em'}} xmlns="http://www.w3.org/2000/svg" class="h-5 w-5"  viewBox="0 0 120 120" fill="currentColor">
         <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd" />
         </svg>
       </nav>
       <Parallax pages={3} style={{ top: '0', left: '0' }}>
   <ParallaxLayer
     offset={0}
-    speed={2.5}
+    speed={0.8}
     style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
     <main className={styles.main}>
         <h6 style={{fontWeight:'100', fontSize:'1.3rem', padding:'0', margin:'0'}}>LIMITED EDITION PARIS</h6>
@@ -36,18 +36,17 @@ export default function Home() {
       <div style={{position:'relative',marginTop:'0.5em', marginLeft:'0.1em',textAlign:'left', fontSize:'15rem', color:'white', fontWeight:'700', zIndex:'1', padding:'0'}}>
         <h1>HERMES</h1>
       </div>
-      <div style={{position:'absolute', top:'180px', padding:'0',left:'50em', zIndex:'1'}}>
-        <Image src={'/watch.png'} width={480} height={480} />        
+      <div style={{position:'absolute', top:'390px', padding:'0',left:'75em', zIndex:'1'}}>
+        <Image src={'/watch.png'} width={480} height={480}></Image>        
       </div>
-      <p  className={styles.header}>A partnership based on parallel thinking, singular vision, and mutual regard continues
-         with a fresh expression. The latest Apple Watch Hermès collection showcases boldly 
-         colorful leather bands and a delightful watch face designed by Apple.</p>
+      
+
   </ParallaxLayer>
 
   <ParallaxLayer offset={1} speed={2} style={{ backgroundColor: '#bfb4af' }} />
   <ParallaxLayer
     offset={1}
-    speed={0.8}
+    speed={1}
     style={{
       display: 'flex',
       justifyContent: 'center',
@@ -57,7 +56,7 @@ export default function Home() {
     <section id="Premium">
       <p className={styles.adv2}><b><span style={{fontSize:'2.5rem'}}>Come full circuit</span></b>. Inspired by the classic chain Hermès bracelet, the Circuit H Single Tour leather bands feature a modern chain motif available in three dynamic color combinations.</p>
       </section>
-      <div style={{position:'absolute', top:'40px', padding:'0',left:'10em', zIndex:'1000'}}>
+      <div style={{position:'absolute', top:'100px', padding:'0',left:'40em', zIndex:'1000'}}>
         <Image src={'/hermes2.png'} width={480} height={680} />
       </div>
       {/* <button className={styles.button}>Learn More</button> */} 
@@ -65,7 +64,7 @@ export default function Home() {
   <ParallaxLayer offset={2} speed={2} style={{ backgroundColor: '#bfb4af' }} />
   <ParallaxLayer
     offset={2}
-    speed={0.8}
+    speed={1}
     style={{
       display: 'flex',
       justifyContent: 'center',
@@ -78,14 +77,12 @@ export default function Home() {
         band with every Apple Watch Hermès silver stainless steel case. And space black stainless steel
          cases come with a matching black Hermès Sport Band.</p>
       </section>
-      <div style={{position:'absolute', top:'40px', padding:'0',left:'60em', zIndex:'1000'}}>
+      <div style={{position:'absolute', top:'180px', padding:'0',left:'90em', zIndex:'1000'}}>
         <Image src={'/hermes.png'} width={480} height={480} />
       </div>
-      <a href="https://www.apple.com/apple-watch-hermes/"><button className={styles.button}>Learn More</button> </a>
 
-      <footer class="text-center text-gray-700 p-4" style={{backgroundColor:'transparent', position:'absolute', width:'100vw', color:'black', fontSize:'1.2rem', marginTop:'34em', textAlign:'center', width:'100%' }}>
-    © 2021 Copyright:
-    <a class="text-gray-800" href="http://ilariapalmas.com/"> Ilaria Palmas </a>
+      <footer class="text-center text-gray-700 p-4" style={{backgroundColor:'transparent', position:'fixed', width:'100vw', color:'black', fontSize:'1.2rem', marginTop:'22em', textAlign:'center', width:'100%' }}>
+    © 2021 Copyright: <a class="text-gray-800" href="http://ilariapalmas.com/"> Ilaria Palmas </a>
 </footer>
       
   </ParallaxLayer>
