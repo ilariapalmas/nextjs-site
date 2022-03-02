@@ -1,25 +1,55 @@
 {
   "name": "y",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
+  "version": "1.0.0",
+  "description": "This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).",
+  "main": "next.config.js",
   "dependencies": {
-    "@heroicons/react": "^1.0.5",
-    "next": "12.0.10",
-    "react": "17.0.2",
-    "react-dom": "17.0.2",
-    "react-fontawesome": "^1.7.1",
-    "react-spring": "^7.2.11"
-  },
-  "devDependencies": {
+    "array-uniq": "^1.0.3",
     "autoprefixer": "^10.4.2",
-    "eslint": "8.8.0",
-    "eslint-config-next": "12.0.10",
+    "async": "^2.6.3",
+    "commander": "^2.20.3",
+    "commondir": "^1.0.1",
+    "email-addresses": "^3.1.0",
+    "eslint-config-next": "^12.0.10",
+    "filenamify": "^4.3.0",
+    "filename-reserved-regex": "^2.0.0",
+    "find-cache-dir": "^3.3.2",
+    "fs-extra": "^8.1.0",
+    "gh-pages": "^3.2.3",
+    "graceful-fs": "^4.2.9",
+    "eslint": "^8.8.0",
+    "jsonfile": "^4.0.0",
+    "lodash": "^4.17.21",
+    "make-dir": "^3.1.0",
+    "next": "^12.0.10",
+    "pify": "^2.3.0",
+    "pinkie": "^2.0.4",
+    "pinkie-promise": "^2.0.1",
     "postcss": "^8.4.6",
-    "tailwindcss": "^3.0.22"
-  }
+    "pkg-dir": "^4.2.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-fontawesome": "^1.7.1",
+    "react-spring": "^7.2.11",
+    "strip-outer": "^1.0.1",
+    "tailwindcss": "^3.0.22",
+    "trim-repeated": "^1.0.0",
+    "universalify": "^0.1.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ilariapalmas/nextjs-site.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ilariapalmas/nextjs-site/issues"
+  },
+  "homepage": "https://github.com/ilariapalmas/nextjs-site#readme"
+  "deploy": "mv build/* ./* && rmdir build"
+
 }

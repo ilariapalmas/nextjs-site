@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import { Parallax, ParallaxLayer } from 'react-spring/addons.cjs'
-import { Trail, animated } from 'react-spring/addons.cjs'
+
 
 export default function Home() {
   return (
